@@ -1,0 +1,1035 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-size: 1.2rem
+}
+
+#en-tete>a>img {
+    display: none;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 3rem;
+    position: fixed;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.85);
+    top: 0;
+    z-index: 9;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    height: 5rem;
+    border-bottom: 3px solid #A63C06;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul a>img {
+    width: 65px;
+    margin-top: 0.7vw;
+}
+
+nav ul a>img:hover {
+    filter: sepia(30%);
+}
+
+nav>ul>li {
+    position: relative;
+    height: 100%;
+    flex: 1;
+}
+
+nav>ul>li>a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    color: white
+}
+
+li>a>p {
+    text-align: center;
+    font-size: 11px;
+}
+
+.menu-deroulant>a:after {
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.menu-deroulant::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+}
+
+.sous-menu {
+    margin-top: 70px;
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.sous-menu>li>a {
+    height: 60px;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    color: black;
+    border-top: 1px solid #A63C06;
+}
+
+nav>ul>li:hover>a {
+    color: #F4E409;
+}
+
+.sous-menu>li:hover {
+    background-color: rgba(255, 247, 0, 0.3);
+}
+
+.sous-menu>li:hover>a {
+    color: black;
+}
+
+.menu-deroulant>a:after {
+    animation: rotationInverse 0.2s linear forwards;
+}
+
+.menu-deroulant:hover>a:after {
+    animation: rotationFleche 0.2s linear forwards;
+}
+
+.menu-deroulant:hover>.sous-menu {
+    animation: apparitionSousMenu 2s forwards;
+}
+
+@keyframes rotationFleche {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotationInverse {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes apparitionSousMenu {
+    0% {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
+        border-top: 3px solid #A63C06;
+    }
+
+    30% {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        max-height: 50em;
+        border-top: 3px solid #A63C06;
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+#pied-de-page {
+    background: rgb(23, 23, 23);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+#pied-de-page nav {
+    display: flex;
+    flex-direction: column;
+}
+
+#pied-de-page a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#pied-de-page a:hover {
+    text-decoration: underline;
+}
+
+#pied-de-page h3 {
+    font-size: 27px;
+    padding-top: 0.5rem;
+    color: white;
+}
+
+#pied-de-page a img {
+    width: 45px;
+    flex-direction: row;
+    margin-left: 0.5rem;
+}
+
+#pied-de-page a>img:hover {
+    filter: sepia(30%);
+}
+
+#content>.header {
+    display: flex;
+    justify-content: center;
+}
+
+#content>.header img {
+    width: 100%;
+}
+
+.header figcaption {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 28vw;
+    color: white;
+    text-shadow: 2px 2px 10px #ffc107;
+}
+
+.header h1 {
+    font-size: 3vw;
+}
+
+.header h2 {
+    margin-top: -1.3vw;
+    font-size: 1.5vw;
+}
+
+.main-header {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#content>figure>img {
+    width: 400px;
+}
+
+.main-header>figcaption>p {
+    font-size: 22px;
+    margin: 1rem;
+}
+
+.titre {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.equipe {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.equipe>figure {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.equipe>figure>figcaption {
+    width: 100%;
+}
+
+.equipe>figure>figcaption>p {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.equipe>figure>figcaption>h2 {
+    margin-bottom: -0.5rem;
+}
+
+.equipe>figure>figcaption>h4 {
+    font-size: 15px;
+}
+
+.equipe>figure>figcaption>div>a img {
+    width: 40px;
+}
+
+#dates-remerciment {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.dates {
+    width: 50%;
+}
+
+.remerciments {
+    width: 50%;
+    margin-left: 5rem;
+}
+
+#dates-remerciment h1 {
+    font-size: 35px;
+    font-weight: 800;
+}
+
+/*Page des Jeux*/
+
+#content2>.header-jeu {
+    display: flex;
+    justify-content: center;
+}
+
+#content2>.header-jeu img {
+    width: 100%;
+}
+
+#content2>.header-jeu figcaption {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 17vw;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+}
+
+#content2>.header-jeu h1 {
+    font-size: 3vw;
+}
+
+#content2>.header-jeu h2 {
+    margin-top: -1.3vw;
+    font-size: 1.5vw;
+}
+
+#content2>.main-header2 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid #A63C06;
+    padding: 1.5rem;
+}
+
+#content2>.main-header2>iframe {
+    width: 50%;
+    height: 22vw;
+}
+
+#content2>.main-header2 figcaption {
+    width: 50%;
+    margin-left: 1.5rem;
+    margin-top: -.7rem;
+    font-size: 21px;
+}
+
+#content2>.main-header2 figcaption>p {
+    margin: .5rem;
+}
+
+#content2>.main-telechargement {
+    max-width: 80%;
+    margin: 1rem auto;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+#content2>.main-telechargement h1 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+#content2>.main-telechargement div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+#content2>.main-telechargement>figure {
+    max-width: 65%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-right: 1.5rem;
+    border-right: 2px solid #A63C06;
+}
+
+#content2>.main-telechargement>figure>figcaption>div p {
+    font-size: 17px;
+}
+
+#content2>.main-telechargement>section {
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: #ffc107;
+    border-radius: 15px;
+    box-shadow: 0 5px #A63C06;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: #F4E409
+}
+
+.button2 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(170, 170, 170);
+    border-radius: 15px;
+    box-shadow: 0 5px #A63C06;
+    margin-top: 1rem;
+}
+
+.button-xbox {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 22px;
+    font-weight: 600;
+    height: 4rem;
+    text-align: center;
+    text-decoration: none;
+    color: #E0E0E0;
+    background-color: #107c10;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #A63C06;
+    margin-top: 3rem;
+}
+
+.button-xbox:hover {
+    background-color: #1dd11d
+}
+
+#content2>.screen-jeux {
+    max-width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#content2>.screen-jeux>img {
+    width: 33%;
+    margin: 2px;
+}
+
+#content2>.perles {
+    width: 80%;
+    margin: 0 auto;
+    border-top: 5px solid #A63C06;
+    padding-top: 1rem;
+}
+
+#content2>.perles>div p {
+    font-size: 17px;
+}
+
+#content2>.screen-perles {
+    max-width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#content2>.screen-perles>figure {
+    width: 33%;
+    margin: 2px;
+}
+
+#content2>.screen-perles>figure>img {
+    width: 100%;
+    margin: 2px;
+}
+
+#content2>.screen-perles>figure>figcaption {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: -1rem;
+    margin-bottom: -.5rem;
+}
+
+@media screen and (max-width:1080px) {
+    li>a>p {
+        font-size: 7px;
+    }
+
+    .sous-menu>li>a {
+        font-size: 12px;
+        height: 65px;
+    }
+
+    .sous-menu {
+        margin-top: 70px;
+    }
+
+    .sous-menu {
+        margin-top: 70px;
+    }
+
+    #content>.main-header>img {
+        width: 15rem;
+    }
+
+    .equipe {
+        width: 100%;
+    }
+
+    .equipe>figure>img {
+        width: 200px;
+    }
+
+    .equipe>figure>figcaption {
+        width: 100%;
+    }
+
+    .dates-remerciment {
+        width: 95%;
+    }
+
+    #pied-de-page>nav {
+        margin: .5rem;
+    }
+
+    #pied-de-page h3 {
+        margin-top: -1rem;
+        text-align: center;
+    }
+
+    #pied-de-page a {
+        font-size: 1.2rem;
+    }
+
+    #pied-de-page a img {
+        width: 50px;
+    }
+
+    /*page jeux*/
+
+    #content2>.header-jeu>img {
+        padding-top: 5rem;
+        width: 100%;
+        height: 464px;
+        object-fit: cover;
+        background: black;
+    }
+
+    #content2 .header-jeu>figcaption {
+        margin-top: 35vw;
+    }
+
+    #content2 .header-jeu h1 {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    #content2 .header-jeu h2 {
+        font-size: 2vw;
+    }
+
+    #content2>.main-header2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #content2>.main-header2>iframe {
+        width: 100%;
+        height: 32rem;
+        margin-top: -.6rem;
+        margin-bottom: 1rem;
+    }
+
+    #content2>.main-header2>figcaption {
+        width: 95%;
+        margin: 0;
+    }
+
+    #content2>.main-telechargement {
+        max-width: 95%;
+    }
+
+    #content2>.main-telechargement>figure {
+        max-width: 100%;
+    }
+
+    #content2>.main-telechargement>figure>div {
+        max-width: 100% !important;
+    }
+
+    #content2>.main-telechargement>figure>figcaption p {
+        margin: auto;
+    }
+
+    #content2>.main-telechargement>section {
+        width: 100%;
+        padding: 0;
+    }
+
+    #content2>.main-telechargement>section h1 {
+        max-width: 100%;
+        margin-left: 0rem;
+    }
+
+    #content2>.main-telechargement>section p {
+        max-width: 100%;
+        margin-left: 0rem;
+    }
+
+    #content2>.main-telechargement>section a {
+        max-width: 100%;
+        margin-left: 0rem !important;
+    }
+
+    .screen-jeux {
+        max-width: 100% !important;
+    }
+
+    #content2>.screen-jeux img {
+        width: 46vw;
+    }
+
+    .perles {
+        width: 95% !important;
+    }
+
+    #content2>.screen-perles {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 95% !important;
+    }
+
+    #content2>.screen-perles>figure {
+        width: 46vw;
+
+    }
+
+    #content2>.screen-perles>figure img {
+        width: 100%;
+    }
+
+    #content2>.screen-perles>figure>figcaption {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width:915px) and (orientation:portrait) {
+
+    #en-tete {
+        background: #000;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    nav>ul {
+        display: none;
+    }
+
+    li {
+        display: none;
+    }
+
+    #en-tete>a>img {
+        display: inline;
+        width: 55px;
+        margin-top: .5vw;
+        margin-left: 1rem;
+    }
+
+    #en-tete>a>img:hover {
+        filter: sepia(30%);
+    }
+
+    .burger-menu {
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        right: 0.5rem;
+        margin-top: 0.2rem;
+        z-index: 10;
+    }
+
+    .burger-menu .line {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: #ffffff;
+        transition: all 0.3s ease;
+    }
+
+    .menu {
+        display: block;
+        margin: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #f8f8f8;
+        position: relative;
+        top: -10px;
+        left: 0;
+        right: 0;
+        transition: max-height 0.5s ease;
+        border-bottom: 3px solid #A63C06;
+        z-index: 10;
+    }
+
+    .menu a:hover {
+        background: #F4E409;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+        border-top: 1px solid #bbb;
+        border-bottom: 1px solid #A63C06;
+        box-shadow: 0 0 1rem #ddd inset;
+    }
+
+    .menu p {
+        text-align: center;
+        font-weight: 600;
+        margin: .5rem;
+    }
+
+    .menu>a>p {
+        font-size: 1rem;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .menu-toggle:checked+.burger-menu+.menu {
+        max-height: 100%;
+    }
+
+    #content .header>img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        margin-top: -.6rem;
+    }
+
+    .header figcaption {
+        margin-top: 170px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header h2 {
+        font-size: 15px;
+    }
+
+    #content>.main-header {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #content>.main-header>figcaption p {
+        max-width: 95%;
+        margin: auto;
+        font-size: 19.2px;
+    }
+
+    .titre {
+        margin-top: 1.5rem;
+    }
+
+    .titre h1 {
+        font-size: 1.9rem;
+        margin-bottom: 1rem;
+    }
+
+    #content>.main-header>img {
+        width: 250px;
+    }
+
+    #content>.equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content>.equipe>figure {
+        width: 95%;
+    }
+
+    #content>.equipe>figure>figcaption {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #content>.equipe>figure>figcaption p {
+        max-width: 95%;
+        margin: auto;
+    }
+
+    .equipe>figure>img {
+        width: 200px;
+    }
+
+    #dates-remerciment {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dates-remerciment>figure h1 {
+        font-size: 1.9rem;
+    }
+
+    .dates {
+        width: 100%;
+    }
+
+    .dates p {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .remerciments {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .remerciments p {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    #pied-de-page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pied-de-page nav {
+        display: flex;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #pied-de-page h3 {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    #pied-de-page a {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    #pied-de-page a img {
+        width: 45px;
+    }
+
+    /*Page des jeux*/
+
+    #content2>.main-header2 {
+        width: 100% !important;
+    }
+
+    #content2 .header-jeu>img {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+        margin-top: -5.7rem;
+        background: none;
+        padding-top: none;
+    }
+
+    #content2 .header-jeu>figcaption {
+        margin-top: 98px;
+    }
+
+    #content2 .header-jeu h1 {
+        font-size: 5vw;
+        text-align: center;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    #content2 .header-jeu h2 {
+        font-size: 3.5vw;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    #content2>.main-header2 {
+        border-bottom: none;
+        padding: 0;
+        margin-top: 0.6rem;
+        padding: 0.2rem;
+    }
+
+    #content2 .main-header2>iframe {
+        width: 100%;
+        height: 55vw;
+    }
+
+    .main-header2>figcaption {
+        margin: auto;
+        border: none;
+    }
+
+    #content2>.main-telechargement {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        border-top: 5px solid #A63C06;
+    }
+
+    #content2>.main-telechargement>figure {
+        border-right: none;
+        padding: 0
+    }
+
+    #content2>.main-telechargement>figure>div>iframe {
+        width: 100%;
+    }
+
+    #content2>.main-telechargement>figure>figcaption p {
+        width: 100%;
+    }
+
+    #content2>.main-telechargement>section {
+        margin-top: 2.5rem;
+        max-width: 100%;
+        border-top: 3px solid #A63C06;
+    }
+
+    #content2>.main-telechargement>section>h1,
+    p {
+        width: 100%;
+        text-align: left;
+    }
+
+    #content2>.main-telechargement>section>h1 {
+        text-align: center;
+    }
+
+    #content2>.main-telechargement>section>a {
+        width: 107.2%;
+        margin-left: -1.5rem;
+    }
+
+    #content2>.screen-jeux img {
+        width: 100%;
+    }
+
+    #content2>.perles {
+        width: 100%;
+    }
+
+    #content2>.perles h2 {
+        margin-bottom: 1rem;
+    }
+
+    #content2>.perles p {
+        width: 100%;
+        margin: auto;
+    }
+
+    #content2>.screen-perles {
+        width: 100%;
+    }
+
+    #content2>.screen-perles>figure {
+        width: 100%;
+        margin: 0;
+    }
+
+    #content2>.screen-perles>figure img {
+        width: 100%;
+    }
+
+    #content2>.screen-perles>figure>figcaption p {
+        width: 100%;
+        margin: 0;
+    }
+}
