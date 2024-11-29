@@ -8,7 +8,7 @@
 
 body {
     font-family: "Baloo Bhaijaan 2", sans-serif;
-    font-size: 1.2rem
+    font-size: 1.2rem;
 }
 
 #en-tete>a>img {
@@ -28,13 +28,10 @@ nav>ul {
     box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
     height: 5rem;
     border-bottom: 3px solid #A63C06;
-}
-
-nav ul {
     list-style-type: none;
 }
 
-nav ul a>img {
+nav ul a img {
     width: 65px;
     margin-top: 0.7vw;
 }
@@ -544,6 +541,10 @@ nav>ul>li:hover>a {
         margin-top: 70px;
     }
 
+    nav > ul > li > a {
+        font-size: 0.8rem;
+    }
+
     #content>.main-header>img {
         width: 15rem;
     }
@@ -706,8 +707,13 @@ nav>ul>li:hover>a {
         display: none;
     }
 
+    #en-tete>a{
+    display: inline-block;
+    }
+
     #en-tete>a>img {
-        display: inline;
+        display: block;
+        
         width: 55px;
         margin-top: .5vw;
         margin-left: 1rem;
